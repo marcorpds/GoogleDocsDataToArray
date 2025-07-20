@@ -17,7 +17,7 @@ def getData(link):
     y_max = 0
     data = []
     
-    # Parse each row in the table to extract the charaacter and its coordinates
+    # Parse each row in the table to extract the character and its coordinates
     for index, row in table.iterrows():
         try:
             x_value = int(row[0])           # X-coordinate
@@ -45,27 +45,3 @@ def getData(link):
 link = "https://docs.google.com/document/d/e/2PACX-1vQGUck9HIFCyezsrBSnmENk5ieJuYwpt7YHYEzeNJkIb9OSDdx-ov2nRNReKQyey-cwJOoEKUhLmN9z/pub"
 getData(link)
 
-"""
-for rowNumber in range(1, len(table)):
-    rowValues = table.loc[rowNumber].values
-    x_value = int(rowValues[0])
-    y_value = int(rowValues[2])
-    if x_value > x_max: x_max = x_value
-    if y_value > y_max: y_max = y_value
-"""
-
-"""
-for rowIndex in range(1, len(table), 1):
-    rowValues = table.loc[rowIndex].values
-    x_value = int(rowValues[0])
-    y_value = int(rowValues[2])
-    char_value = rowValues[1]
-    image_array[y_value][x_value] = char_value
-"""
-
-"""
-for y in range(y_max+1):
-    print('')
-    for x in range(x_max+1):
-        print(image_array[y][x], end='')
-"""
